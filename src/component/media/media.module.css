@@ -1,0 +1,147 @@
+@value constants: "../../styles/constants.css";
+@value small-break, medium-break, large-break from constants;
+
+.card {
+    width: 80%;
+    padding: 1em 1em;
+    margin: 2em auto;
+}
+
+.date {
+    font-size: .8em;
+}
+
+.description {
+  margin-bottom: 2em;
+}
+
+.roundButton {
+    min-width: 6em;
+    border-radius: 8em;
+    margin: auto .5em;
+}
+
+.title {
+    font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(256,256,256,0.1);
+  }
+
+  .date {
+    color: whitesmoke;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background: whitesmoke;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  .date {
+    color: grey;
+  }
+}
+
+@media only screen and (min-width: small-break) {
+  .card {
+    width: 90%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .description {
+    max-width: 90%;
+    max-height: 100em;
+    -webkit-transition: max-height 1s;
+    -moz-transition: max-height 1s;
+    transition: max-height 1s;
+    overflow: hidden;
+    margin-bottom: 0px;
+  }
+
+  .dropdown {
+    display: inline-block;
+    position: absolute;
+    top: 1.25em;
+    right: .5em;
+    width: 1em;
+  }
+
+  .hidden {
+    max-height: 0;
+  }
+
+  .title {
+    max-width: 90%;
+  }
+
+  .thumbnail {
+    width:50px;
+  }
+}
+
+@media only screen and (min-width: medium-break) {
+  .card {
+    width: 90%;
+    cursor: auto;
+  }
+
+  .description {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .hidden {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 2em;
+    max-height: 500em;
+  }
+  
+  .thumbnail {
+    width:100px;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: large-break) {
+  .card {
+    width: 80%;
+    cursor: auto;
+  }
+
+  .description {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .hidden {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 2em;
+    max-height: 500em;
+  }
+
+  .thumbnail {
+    width:200px;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+}

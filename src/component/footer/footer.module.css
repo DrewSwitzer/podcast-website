@@ -1,0 +1,93 @@
+@value constants: "../../styles/constants.css";
+@value small-break, large-break from constants;
+
+.babyLeft {
+  position: absolute;
+  bottom: 10em;
+  left: 2em;
+}
+
+.babyRight {
+  position: absolute;
+  bottom: 10em;
+  right: 2em;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footerRetro {
+    background-image: url("../../images/fire-banner.gif") !important;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+    font: lighter;
+    font-size: .8em;
+}
+
+.logo {
+    border-radius: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: rgba(256, 256, 256, .05);
+    color: white;
+    text-align: center;
+    width: 100%
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .footer {
+    background:dimgray;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: small-break) {
+  .footer {
+    height: 8em;
+    margin-top: 1em;
+  }
+
+  .header {
+    font-size: 1em;
+  }
+
+  .logo {
+    margin: 1em .25em;
+  }
+
+  .logo img {
+    height: 1em;
+  }
+}
+
+@media only screen and (min-width: large-break) {
+  .footer {
+    height: 11em;
+    margin-top: 3em;
+  }
+
+  .header {
+    font-size: 1.5em;
+  }
+
+  .logo {
+    margin: 2em .5em;
+  }
+
+  .logo img {
+    height: 2em;
+  }
+}

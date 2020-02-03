@@ -1,0 +1,46 @@
+@value constants: "../../styles/constants.css";
+@value small-break, large-break from constants;
+
+.audio {
+    margin: auto .5em;
+    height: 2em;
+    width: 70%;
+}
+
+.download {
+  border-radius: 8em;
+  margin: auto .5em;
+  vertical-align: top;
+}
+
+.roundButton {
+    border-radius: 8em;
+    margin: auto .5em;
+    vertical-align: top;
+}
+
+.roundButton img {
+    height: .8em;
+    margin: auto .25em;
+    vertical-align: top;
+}
+
+@media (prefers-color-scheme: dark) {
+  .download {
+    color: white !important;
+    border-color: white !important;
+  }
+} 
+
+@media only screen and (min-width: small-break) {
+  .roundButton {
+    min-width: 4em;
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: large-break) {
+  .roundButton {
+    min-width: 6em;
+  }
+}
